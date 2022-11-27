@@ -1,10 +1,6 @@
+
 import requests
-
-
-headers = requests.utils.default_headers()
-
-reponse = requests.get(str("http://httpbin.org/ip'"))
-
-
-print(reponse.text )
+session = requests.session()
+r = session.get("http://httpbin.org/ip")
+print(r.text)
 
